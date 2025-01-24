@@ -14,17 +14,17 @@ const router=createBrowserRouter([
     element:<App/>,
     errorElement:<NotFoundPage/>
   }, {
-    path:'/about',
+    path:'/portfolio/about',
     element:<AboutMe/>,
     errorElement:<NotFoundPage/>
   },
   {
-    path:'/skills',
+    path:'/portfolio/skills',
     element:<Skills/>,
     errorElement:<NotFoundPage/>
   },
   {
-    path:'/project',
+    path:'/portfolio/project',
     element:<Projects/>,
     errorElement:<NotFoundPage/>
   },

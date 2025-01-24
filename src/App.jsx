@@ -11,7 +11,8 @@ function App() {
 function handleLoad(){
   setload(false)
 }
-  return (<div>
+  return (
+  <div className='home'>
 {load && (<div className="loading-screen">
           <div className="spinner"></div>
           <p>Loading...</p>
@@ -24,12 +25,12 @@ function handleLoad(){
 <div  className='intro'>Hi, it's Shreeram 👋</div>
   <div className='content'>
     <div className='box1'>
-      <div><Link style={{ textDecoration: 'none', color: 'inherit',backgroundColor:'transparent' }} to='/about'>ABOUT ME</Link></div>
-     <div><Link style={{ textDecoration: 'none', color: 'inherit',backgroundColor:'transparent' }} to='/skills'>SKILLS</Link></div> 
+      <div><Link style={{ textDecoration: 'none', color: 'inherit',backgroundColor:'transparent' }} to='/portfolio/about'>ABOUT ME</Link></div>
+     <div><Link style={{ textDecoration: 'none', color: 'inherit',backgroundColor:'transparent' }} to='/portfolio/skills'>SKILLS</Link></div> 
     </div>
 
     <div className='box2'>
-    <Link to='/project' style={{ textDecoration: 'none', color: 'inherit' ,backgroundColor:'transparent'}}> PROJECTS</Link></div>
+    <Link to='/portfolio/project' style={{ textDecoration: 'none', color: 'inherit' ,backgroundColor:'transprent'}}> PROJECTS</Link></div>
       <div className='box3' >
     <a href='https://github.com/mugenGH/' target='_blank' style={{ textDecoration: 'none',color: 'inherit'}}> <FontAwesomeIcon icon={faGithub} /></a> 
     <a href='https://www.linkedin.com/in/shreeram-r-58a302263/'  target='_blank' style={{ textDecoration: 'none',color: 'inherit'}}>   <FontAwesomeIcon icon={faLinkedin} /></a> 
