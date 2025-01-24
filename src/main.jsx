@@ -10,7 +10,7 @@ import Projects from './screens/Projects.jsx'
 const router=createBrowserRouter([
 
   {
-    path:'/',
+    path:'/portfolio',
     element:<App/>,
     errorElement:<NotFoundPage/>
   }, {
