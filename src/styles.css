@@ -1,6 +1,6 @@
 .bg{
-    width: 80vw;
-    height: 90vh;
+    width: 80%;
+    height: 90%;
    position: fixed;
     top: 10%;
     left: 10%;
@@ -19,7 +19,7 @@ background-color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #C0C0C0;
     left: 42%;
-    font-size: 30px;
+    font-size: 2rem;
     top:12%;
     filter: brightness(0.7) saturate(0.5);
     background-color: transparent;
@@ -27,13 +27,13 @@ background-color: black;
 .content{
     /* Same height as .bg */
     position: absolute;  /* Absolutely position the content over .bg */
-    top: 10px;
-   left: 15px;
+    top: 1rem;
+   left: 1rem;
     z-index: 2;  /* Ensure it is above the background */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #D8A7E6;
     filter: brightness(0.7) saturate(0.5);
-    font-size: 50PX;
+    font-size: 3rem;
     background-color: transparent;
 }
 .box1{
@@ -52,7 +52,7 @@ background-color: black;
     position: absolute;
     display: flex;
     flex-direction: column;
-   right: 0;
+   right: 0%;
     margin-top: 30%;
 }
 
@@ -159,7 +159,7 @@ background-color: black;
     padding: 1rem;
     text-align: justify;
     overflow-y: auto;
-    
+
   }
   
   .projects::-webkit-scrollbar {
