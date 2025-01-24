@@ -1,0 +1,183 @@
+.bg{
+    width: 80vw;
+    height: 90vh;
+   position: fixed;
+    top: 10%;
+    left: 10%;
+   z-index: 1;
+ 
+    pointer-events:all;;
+    
+}
+
+*{
+background-color: black;
+}
+.intro{
+    z-index: 2;
+    position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #C0C0C0;
+    left: 42%;
+    font-size: 30px;
+    top:12%;
+    filter: brightness(0.7) saturate(0.5);
+    background-color: transparent;
+}
+.content{
+    /* Same height as .bg */
+    position: absolute;  /* Absolutely position the content over .bg */
+    top: 10px;
+   left: 15px;
+    z-index: 2;  /* Ensure it is above the background */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #D8A7E6;
+    filter: brightness(0.7) saturate(0.5);
+    font-size: 50PX;
+    background-color: transparent;
+}
+.box1{
+   
+    width: 200vh;
+    display: flex;
+    justify-content: space-between;
+}
+.box2{
+    position: fixed;  /* Fixed to the bottom-left of the screen */
+    margin-top: 38.5%;
+
+}
+.box3{
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+   right: 0;
+    margin-top: 30%;
+}
+
+.spline-bg{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.abtcont{
+    z-index: 2;
+    position: relative;
+    background-color: transparent;
+    color:#4B3052;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* Loader Container */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999; /* Above everything */
+    color: #d8a7e6; /* Volute text color */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Spinner Animation */
+  .spinner {
+    border: 6px solid #ccc; /* Light gray border */
+    border-top: 6px solid #d8a7e6; /* Accent color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Spline Container */
+  .spline-container.hidden {
+    display: none; /* Hide Spline until it's ready */
+  }
+  
+
+  .projects{
+
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: fixed;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#4B3052;
+    filter: brightness(0.7) saturate(0.5);
+    right: 3rem;
+    top:2rem;
+    padding: 2rem;
+    overflow-y: auto;
+    height: 80%; /* Adjust the height of the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+
+    
+  }
+
+  .porj{
+    background-color: #ccc;
+    height: 10rem;
+    width: 12rem;
+    padding: 2rem;
+    margin-bottom: 30%;
+    border-radius: 8%;
+  }
+.porj:hover{
+  filter: brightness(0.7) saturate(0.5);
+}
+  .summary{
+    z-index: 2;
+    position: relative;
+    height: 400px;
+    width: 300px;
+    border: #D8A7E6 solid 6px;
+  }
+  .summary > div{
+    margin-top: 3rem;
+    padding: 1rem;
+    text-align: justify;
+    overflow-y: auto;
+    
+  }
+  
+  .projects::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    background-color: #f5f5f5; /* Background color of the scrollbar track */
+  }
+  
+  .projects::-webkit-scrollbar-thumb {
+    background-color:#4B3052; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Round edges of the thumb */
+    border: 2px solid #f5f5f5; /* Add space around the thumb */
+  }
+  
+  .projects::-webkit-scrollbar-thumb:hover {
+    background-color: #b58ecb; /* Color on hover */
+  }
+  
+  .projects::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* Track color */
+    border-radius: 4px;
+  }
