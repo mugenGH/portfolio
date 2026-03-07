@@ -1,38 +1,19 @@
-import { StrictMode } from 'react'
-import {createBrowserRouter,RouterProvider } from 'react-router-dom'
-import {createRoot} from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import Skills from './screens/Skills.jsx'
-import NotFoundPage from './screens/NotFoundPage.jsx'
-import AboutMe from './screens/AboutMe.jsx'
-import Projects from './screens/Projects.jsx'
-const router=createBrowserRouter([
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './App_electric.jsx';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
+import { initializeAnalytics, ANALYTICS_CONFIG } from './utils/analytics.js';
 
-  {
-    path:'/portfolio',
-    element:<App/>,
-    errorElement:<NotFoundPage/>
-  }, {
-    path:'/portfolio/about',
-    element:<AboutMe/>,
-    errorElement:<NotFoundPage/>
-  },
-  {
-    path:'/portfolio/skills',
-    element:<Skills/>,
-    errorElement:<NotFoundPage/>
-  },
-  {
-    path:'/portfolio/project',
-    element:<Projects/>,
-    errorElement:<NotFoundPage/>
-  },
-
-])
+// Initialize Analytics
+if (process.env.NODE_ENV === 'production') {
+  initializeAnalytics(ANALYTICS_CONFIG.measurementId);
+}
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
-)
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </StrictMode>
+);
